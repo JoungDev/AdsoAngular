@@ -1,0 +1,31 @@
+<div class="container text-center">
+  <div class="row align-items-start">
+    <div class="col">
+      <h3>Contenido del padre</h3>
+      <h4>El mensaje recibido desde hijo es: {{ mensajecibido }}</h4>
+      <div class="row g-3 align-items-center mt-4 justify-content-center">
+        <div class="col-auto">
+          <label for="inputPassword6" class="col-form-label">Valor</label>
+        </div>
+        <div class="col-auto">
+          <input
+            type="text"
+            id="inputPassword6"
+            class="form-control"
+            aria-describedby="passwordHelpInline"
+            disabled
+            value="{{ valor }}"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <h3>Contenido del hijo</h3>
+      <app-hijo
+        (mensajeDesdeHijo)="recibirMensaje($event)"
+        (incrementarDesdeHijo)="incrementar()"
+        (disminuirDesdeHijo)="disminuir()"
+      />
+    </div>
+  </div>
+</div>

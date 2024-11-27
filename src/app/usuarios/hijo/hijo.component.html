@@ -1,0 +1,35 @@
+<!--<h1>El mensaje recibido fue: {{ recibeHijo }}</h1>-->
+<div class="row g-3">
+  <div class="col-auto">
+    <label for="entrada">Mensaje para mi padre: </label>
+  </div>
+  <div class="col-auto">
+    <input
+      class="form-control"
+      type="text"
+      id="entrada"
+      [(ngModel)]="mensaje"
+    />
+  </div>
+  <div class="col-auto">
+    <button class="btn btn-primary" type="button" (click)="enviarMensaje()">
+      Enviar
+    </button>
+  </div>
+</div>
+<div class="row g-3 mt-3 justify-content-center">
+  <div class="col-auto">
+    <button
+      type="submit"
+      class="btn btn-outline-success"
+      (click)="incrementar()"
+    >
+      Incrementar
+    </button>
+  </div>
+  <div class="col-auto">
+    <button type="submit" class="btn btn-outline-warning" (click)="disminuir()">
+      Disminuir
+    </button>
+  </div>
+</div>
